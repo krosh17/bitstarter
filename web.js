@@ -2,8 +2,8 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
-var text=fs.readFile("index.html",String)
-
+fs.readFileSync("index.html");
+var text=buf.toString();
 
 app.get('/', function(request, response) {
   response.send('Welcome back Shevaldos!'+text);
